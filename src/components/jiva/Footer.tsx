@@ -17,31 +17,46 @@ const Footer = () => (
 
       {/* Quick links */}
       <div>
-        <h4 className="font-cormorant text-cream text-base font-semibold mb-4">Quick Links</h4>
+        <h4 className="font-cormorant text-cream text-base font-semibold mb-4">
+          Quick Links
+        </h4>
         <div className="flex flex-col gap-2">
-          {["About", "How It Works", "Impact", "Technology", "Vision"].map((l) => (
-            <a
-              key={l}
-              href={`#${l.toLowerCase().replace(/ /g, "-")}`}
-              className="font-source-serif text-parchment text-sm hover:text-cream transition-colors"
-            >
-              {l}
-            </a>
-          ))}
+          {["About", "How It Works", "Impact", "Technology", "Vision"].map(
+            (l) => (
+              <a
+                key={l}
+                href={`#${l.toLowerCase().replace(/ /g, "-")}`}
+                className="font-source-serif text-parchment text-sm hover:text-cream transition-colors"
+              >
+                {l}
+              </a>
+            ),
+          )}
         </div>
       </div>
 
       {/* Contact */}
       <div>
-        <h4 className="font-cormorant text-cream text-base font-semibold mb-4">Contact</h4>
+        <h4 className="font-cormorant text-cream text-base font-semibold mb-4">
+          Contact
+        </h4>
         <div className="flex flex-col gap-2">
-          <a href="mailto:hello@setient.com" className="font-source-serif text-parchment text-sm hover:text-cream transition-colors">
-            hello@setient.com
+          <a
+            href="mailto:prashant@setient.co.uk"
+            className="font-source-serif text-parchment text-sm hover:text-cream transition-colors"
+          >
+            prashant@setient.co.uk
           </a>
-          <a href="#" className="font-source-serif text-parchment text-sm hover:text-cream transition-colors">
+          <a
+            href="#"
+            className="font-source-serif text-parchment text-sm hover:text-cream transition-colors"
+          >
             LinkedIn
           </a>
-          <a href="#" className="font-source-serif text-parchment text-sm hover:text-cream transition-colors">
+          <a
+            href="#"
+            className="font-source-serif text-parchment text-sm hover:text-cream transition-colors"
+          >
             GitHub
           </a>
         </div>
