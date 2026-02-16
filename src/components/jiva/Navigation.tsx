@@ -29,7 +29,7 @@ const Navigation = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
         {/* Logo */}
         <a href="#" className="flex items-center gap-2">
-          <FlowerOfLife className="w-8 h-8 text-copper" opacity={0.8} />
+          <FlowerOfLife className="w-8 h-8 text-copper" opacity={0.2} />
           <span className="font-playfair text-xl text-cream tracking-wide">
             जीव
           </span>

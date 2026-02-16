@@ -6,7 +6,7 @@ const Footer = () => (
       {/* Logo */}
       <div>
         <div className="flex items-center gap-2 mb-3">
-          <FlowerOfLife className="w-7 h-7 text-copper" opacity={0.8} />
+          <FlowerOfLife className="w-7 h-7 text-copper" opacity={0.2} />
           <span className="font-playfair text-cream text-lg">जीवा</span>
         </div>
         <p className="font-source-serif text-parchment text-sm">Setient Ltd</p>
