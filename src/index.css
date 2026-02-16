@@ -1,0 +1,163 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Jiva Harmony palette */
+    --earth: 16 38% 12%;
+    --soil: 25 38% 16%;
+    --bark: 19 33% 27%;
+    --copper: 27 51% 46%;
+    --gold: 40 56% 55%;
+    --leaf: 144 26% 39%;
+    --sage: 108 19% 56%;
+    --cream: 36 33% 93%;
+    --parchment: 33 30% 85%;
+    --warm-white: 36 33% 96%;
+    --terracotta: 18 48% 53%;
+    --sky: 200 22% 53%;
+    --earth-darker: 18 42% 10%;
+
+    /* Map to shadcn tokens */
+    --background: 16 38% 12%;
+    --foreground: 36 33% 93%;
+    --card: 25 38% 16%;
+    --card-foreground: 36 33% 93%;
+    --popover: 25 38% 16%;
+    --popover-foreground: 36 33% 93%;
+    --primary: 27 51% 46%;
+    --primary-foreground: 16 38% 12%;
+    --secondary: 19 33% 27%;
+    --secondary-foreground: 36 33% 93%;
+    --muted: 25 38% 16%;
+    --muted-foreground: 33 30% 85%;
+    --accent: 27 51% 46%;
+    --accent-foreground: 16 38% 12%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 36 33% 93%;
+    --border: 19 33% 27%;
+    --input: 19 33% 27%;
+    --ring: 27 51% 46%;
+    --radius: 0.75rem;
+
+    --sidebar-background: 25 38% 16%;
+    --sidebar-foreground: 36 33% 93%;
+    --sidebar-primary: 27 51% 46%;
+    --sidebar-primary-foreground: 16 38% 12%;
+    --sidebar-accent: 19 33% 27%;
+    --sidebar-accent-foreground: 36 33% 93%;
+    --sidebar-border: 19 33% 27%;
+    --sidebar-ring: 27 51% 46%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Source Serif 4', Georgia, serif;
+  }
+}
+
+@layer utilities {
+  .font-playfair {
+    font-family: 'Playfair Display', Georgia, serif;
+  }
+  .font-cormorant {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+  }
+  .font-mono-dm {
+    font-family: 'DM Mono', monospace;
+  }
+  .font-source-serif {
+    font-family: 'Source Serif 4', Georgia, serif;
+  }
+  .text-copper {
+    color: hsl(var(--copper));
+  }
+  .text-gold {
+    color: hsl(var(--gold));
+  }
+  .text-cream {
+    color: hsl(var(--cream));
+  }
+  .text-parchment {
+    color: hsl(var(--parchment));
+  }
+  .text-leaf {
+    color: hsl(var(--leaf));
+  }
+  .text-sage {
+    color: hsl(var(--sage));
+  }
+  .text-earth {
+    color: hsl(var(--earth));
+  }
+  .text-soil {
+    color: hsl(var(--soil));
+  }
+  .bg-earth {
+    background-color: hsl(var(--earth));
+  }
+  .bg-soil {
+    background-color: hsl(var(--soil));
+  }
+  .bg-warm-white {
+    background-color: hsl(var(--warm-white));
+  }
+  .bg-copper {
+    background-color: hsl(var(--copper));
+  }
+  .bg-earth-darker {
+    background-color: hsl(var(--earth-darker));
+  }
+  .border-bark {
+    border-color: hsl(var(--bark) / 0.2);
+  }
+  .border-copper {
+    border-color: hsl(var(--copper));
+  }
+  .bg-copper-hover:hover {
+    background-color: hsl(var(--copper) / 0.9);
+  }
+  .grain-overlay {
+    position: relative;
+  }
+  .grain-overlay::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    opacity: 0.03;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  /* Fade in animation for scroll */
+  .fade-in-section {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+  }
+  .fade-in-section.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .fade-in-section {
+      opacity: 1;
+      transform: none;
+      transition: none;
+    }
+    html {
+      scroll-behavior: auto;
+    }
+  }
+}
