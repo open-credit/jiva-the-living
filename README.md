@@ -1,6 +1,6 @@
 # Jiva — The Living Ledger
 
-India's first bio-digital bank for rural households. Jiva converts biological capital — livestock, poultry, agricultural productivity — into formal credit scores, unlocking financial access for 190 million households whose wealth has never been recognized by traditional finance.
+India's first bio-digital bank for rural households. Jiv converts biological capital — livestock, poultry, agricultural productivity — into formal credit scores, unlocking financial access for 190 million households whose wealth has never been recognized by traditional finance.
 
 ## The Problem
 

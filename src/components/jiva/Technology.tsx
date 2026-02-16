@@ -2,7 +2,7 @@ import { useFadeIn } from "@/hooks/useFadeIn";
 
 const stack = [
   "Open Credit Core (Java / Spring Boot)",
-  "Jiva Platform (Python FastAPI + React Native)",
+  "Jiv Platform (Python FastAPI + React Native)",
   "India Stack (Aadhaar / UPI / ONDC / eNAM / AA)",
   "Offline-First Architecture",
 ];

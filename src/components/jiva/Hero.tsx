@@ -20,13 +20,21 @@ const Hero = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} className="relative min-h-screen flex flex-col items-center justify-center bg-earth grain-overlay overflow-hidden">
+    <section
+      ref={sectionRef}
+      className="relative min-h-screen flex flex-col items-center justify-center bg-earth grain-overlay overflow-hidden"
+    >
       {/* Flower of Life background with parallax */}
       <div
         className="absolute inset-0 flex items-center justify-center pointer-events-none"
-        style={{ transform: `translateY(${scrollY * 0.3}px) rotate(${scrollY * 0.05}deg)` }}
+        style={{
+          transform: `translateY(${scrollY * 0.3}px) rotate(${scrollY * 0.05}deg)`,
+        }}
       >
-        <FlowerOfLife className="w-[800px] h-[800px] text-cream" opacity={0.06} />
+        <FlowerOfLife
+          className="w-[800px] h-[800px] text-cream"
+          opacity={0.06}
+        />
       </div>
 
       <div className="relative z-10 text-center px-4 sm:px-6 max-w-4xl mx-auto pt-20">
@@ -34,7 +42,7 @@ const Hero = () => {
           className="font-playfair text-cream font-bold mb-4"
           style={{ fontSize: "clamp(2.5rem, 5vw, 5rem)" }}
         >
-          Jiva · The Living Ledger
+          Jiv · The Living Ledger
         </h1>
 
         <p className="font-cormorant text-parchment italic text-xl sm:text-2xl mb-6">
@@ -42,8 +50,8 @@ const Hero = () => {
         </p>
 
         <p className="font-source-serif text-cream text-base sm:text-lg max-w-[700px] mx-auto mb-10 leading-relaxed">
-          190 million rural households aren't poor. They hold the world's oldest currency — biological
-          capital. Jiva is the exchange rate.
+          190 million rural households aren't poor. They hold the world's oldest
+          currency — biological capital. Jiv is the exchange rate.
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
@@ -73,7 +81,9 @@ const Hero = () => {
               <div className="font-mono-dm text-gold text-2xl sm:text-3xl font-medium">
                 {stat.value}
               </div>
-              <div className="font-source-serif text-parchment text-sm mt-1">{stat.label}</div>
+              <div className="font-source-serif text-parchment text-sm mt-1">
+                {stat.label}
+              </div>
             </div>
           ))}
         </div>
