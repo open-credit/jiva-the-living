@@ -21,11 +21,11 @@ const Footer = () => (
           Quick Links
         </h4>
         <div className="flex flex-col gap-2">
-          {["About", "How It Works", "Impact", "Technology", "Vision"].map(
+          {["About", "How It Works", "Impact", "Technology", "Vision", "Blueprint"].map(
             (l) => (
               <a
                 key={l}
-                href={`#${l.toLowerCase().replace(/ /g, "-")}`}
+                href={l === "Blueprint" ? "/blueprint" : `#${l.toLowerCase().replace(/ /g, "-")}`}
                 className="font-source-serif text-parchment text-sm hover:text-cream transition-colors"
               >
                 {l}

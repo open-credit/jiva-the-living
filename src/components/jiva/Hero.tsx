@@ -62,7 +62,7 @@ const Hero = () => {
             See How It Works
           </a>
           <a
-            href="#"
+            href="/blueprint"
             className="border border-copper text-copper font-source-serif font-semibold px-8 py-3 rounded-lg hover:bg-copper/10 transition-colors"
           >
             Read the Whitepaper

@@ -1,13 +1,33 @@
-const FlowerOfLife = ({ className = "", opacity = 0.07 }: { className?: string; opacity?: number }) => (
+const FlowerOfLife = ({
+  className = "",
+  opacity = 0.7,
+  strokeWidth = 1.5,
+  gradient = false,
+}: {
+  className?: string;
+  opacity?: number;
+  strokeWidth?: number;
+  gradient?: boolean;
+}) => (
   <svg
     className={className}
     style={{ opacity }}
     viewBox="0 0 400 400"
     xmlns="http://www.w3.org/2000/svg"
     fill="none"
-    stroke="currentColor"
-    strokeWidth="0.5"
+    stroke={gradient ? "url(#goldGrad)" : "currentColor"}
+    strokeWidth={strokeWidth}
   >
+    {gradient && (
+      <defs>
+        <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="#D4A843" />
+          <stop offset="40%" stopColor="#C6922A" />
+          <stop offset="70%" stopColor="#B87333" />
+          <stop offset="100%" stopColor="#D4A843" />
+        </linearGradient>
+      </defs>
+    )}
     {/* Central circle */}
     <circle cx="200" cy="200" r="50" />
     {/* 6 surrounding circles */}

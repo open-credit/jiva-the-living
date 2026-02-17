@@ -7,6 +7,7 @@ const navLinks = [
   { label: "Impact", href: "#impact" },
   { label: "The Thesis", href: "#vision" },
   { label: "Open Source", href: "#technology" },
+  { label: "Blueprint", href: "/blueprint" },
   { label: "Contact", href: "#footer" },
 ];
 
@@ -29,8 +30,8 @@ const Navigation = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
         {/* Logo */}
         <a href="#" className="flex items-center gap-2">
-          <FlowerOfLife className="w-8 h-8 text-copper" opacity={0.2} />
-          <span className="font-playfair text-xl text-cream tracking-wide">
+          <FlowerOfLife className="w-10 h-10" opacity={1} strokeWidth={3} gradient />
+          <span className="font-playfair text-2xl text-cream tracking-wide font-bold">
             जीव
           </span>
         </a>

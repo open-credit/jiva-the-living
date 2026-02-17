@@ -31,6 +31,7 @@ export default {
         "warm-white": "hsl(var(--warm-white))",
         terracotta: "hsl(var(--terracotta))",
         sky: "hsl(var(--sky))",
+        water: "hsl(var(--water))",
         "earth-darker": "hsl(var(--earth-darker))",
         primary: {
           DEFAULT: "hsl(var(--primary))",

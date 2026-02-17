@@ -35,7 +35,7 @@ const Vision = () => {
 
         <div className="text-center">
           <a
-            href="#"
+            href="/blueprint"
             className="bg-copper text-earth font-source-serif font-semibold px-8 py-3 rounded-lg hover:opacity-90 transition-opacity inline-block"
           >
             Read the Full Thesis →
