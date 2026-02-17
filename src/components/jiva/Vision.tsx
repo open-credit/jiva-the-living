@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { useFadeIn } from "@/hooks/useFadeIn";
 
 const Vision = () => {
@@ -34,12 +35,12 @@ const Vision = () => {
         </p>
 
         <div className="text-center">
-          <a
-            href="/blueprint"
+          <Link
+            to="/blueprint"
             className="bg-copper text-earth font-source-serif font-semibold px-8 py-3 rounded-lg hover:opacity-90 transition-opacity inline-block"
           >
             Read the Full Thesis →
-          </a>
+          </Link>
         </div>
       </div>
     </section>

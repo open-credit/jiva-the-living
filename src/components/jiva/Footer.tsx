@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import FlowerOfLife from "./FlowerOfLife";
 
 const Footer = () => (
@@ -21,17 +22,23 @@ const Footer = () => (
           Quick Links
         </h4>
         <div className="flex flex-col gap-2">
-          {["About", "How It Works", "Impact", "Technology", "Vision", "Blueprint"].map(
+          {["About", "How It Works", "Impact", "Technology", "Vision"].map(
             (l) => (
               <a
                 key={l}
-                href={l === "Blueprint" ? "/blueprint" : `#${l.toLowerCase().replace(/ /g, "-")}`}
+                href={`#${l.toLowerCase().replace(/ /g, "-")}`}
                 className="font-source-serif text-parchment text-sm hover:text-cream transition-colors"
               >
                 {l}
               </a>
             ),
           )}
+          <Link
+            to="/blueprint"
+            className="font-source-serif text-parchment text-sm hover:text-cream transition-colors"
+          >
+            Blueprint
+          </Link>
         </div>
       </div>
 

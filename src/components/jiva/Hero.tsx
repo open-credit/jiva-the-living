@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { Link } from "react-router-dom";
 import FlowerOfLife from "./FlowerOfLife";
 import { ChevronDown } from "lucide-react";
 
@@ -61,12 +62,12 @@ const Hero = () => {
           >
             See How It Works
           </a>
-          <a
-            href="/blueprint"
+          <Link
+            to="/blueprint"
             className="border border-copper text-copper font-source-serif font-semibold px-8 py-3 rounded-lg hover:bg-copper/10 transition-colors"
           >
             Read the Whitepaper
-          </a>
+          </Link>
         </div>
 
         {/* Scroll indicator */}

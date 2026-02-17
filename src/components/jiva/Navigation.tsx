@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import FlowerOfLife from "./FlowerOfLife";
 
 const navLinks = [
@@ -10,6 +11,21 @@ const navLinks = [
   { label: "Blueprint", href: "/blueprint" },
   { label: "Contact", href: "#footer" },
 ];
+
+function NavItem({ link, className, onClick }: { link: typeof navLinks[0]; className: string; onClick?: () => void }) {
+  if (link.href.startsWith("/")) {
+    return (
+      <Link to={link.href} className={className} onClick={onClick}>
+        {link.label}
+      </Link>
+    );
+  }
+  return (
+    <a href={link.href} className={className} onClick={onClick}>
+      {link.label}
+    </a>
+  );
+}
 
 const Navigation = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -39,13 +55,11 @@ const Navigation = () => {
         {/* Desktop links */}
         <div className="hidden md:flex items-center gap-6">
           {navLinks.map((link) => (
-            <a
+            <NavItem
               key={link.href}
-              href={link.href}
+              link={link}
               className="font-cormorant text-sm text-parchment hover:text-cream transition-colors"
-            >
-              {link.label}
-            </a>
+            />
           ))}
           <a
             href="#footer"
@@ -83,14 +97,12 @@ const Navigation = () => {
         <div className="md:hidden bg-soil border-t border-bark animate-in slide-in-from-right">
           <div className="px-4 py-6 flex flex-col gap-4">
             {navLinks.map((link) => (
-              <a
+              <NavItem
                 key={link.href}
-                href={link.href}
-                onClick={() => setMenuOpen(false)}
+                link={link}
                 className="font-cormorant text-lg text-parchment hover:text-cream transition-colors"
-              >
-                {link.label}
-              </a>
+                onClick={() => setMenuOpen(false)}
+              />
             ))}
             <a
               href="#footer"
